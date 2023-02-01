@@ -1,4 +1,7 @@
 /*
+Auteur : Manzambi Holly
+ */
+/*
  * Copyright 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,7 +39,7 @@ class GameWonFragment : Fragment() {
         binding.nextMatchButton.setOnClickListener {view: View ->
             view.findNavController().navigate(GameOverFragmentDirections.actionGameOverFragment2ToGameFragment())
         }
-        var args = GameWonFragmentArgs.fromBundle(arguments)
+        var args = GameWonFragmentArgs.fromBundle(arguments !!)
         Toast.makeText(context,
             "NumCorrect : ${args.numCorrect},NumQuestions: ${args.numQuestions}",
             Toast.LENGTH_LONG).show()
